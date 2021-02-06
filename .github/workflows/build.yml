@@ -1,9 +1,9 @@
-name: Build and Test
+name: Checkout and Test
 
 on: [push, workflow_dispatch]
 
 jobs: 
-  build-and-test:
+  checkout-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
