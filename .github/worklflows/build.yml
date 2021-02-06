@@ -1,0 +1,19 @@
+name: Build and Test
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: "actions/checkout@v1"
+      - name: List checked out files
+        run:
+          ls -al
+      - name: Output node version and npm version
+        run: |
+          node -v
+          npm -v
+      - name: Run Tests
+        run: npm test
